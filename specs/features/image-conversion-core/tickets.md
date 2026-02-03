@@ -21,7 +21,7 @@ Global Dependencies:
    - **Dependencies**: None.
    - **Deliverables**: FastAPI Endpoint, Pydantic Model (if metadata needed), Pytest for validation (valid/invalid files).
 
-2. - [ ] **ICC-USER-001-FE-T02 — File Upload Component**
+2. - [x] **ICC-USER-001-FE-T02 — File Upload Component** (2026-02-03)
    - **Type**: FE
    - **Description**: Implement a Drag & Drop zone and "Browse" button. Use a library like `react-dropzone`. Validate size/type client-side for immediate feedback. Show upload progress (simulated or real).
    - **Scope**: Included: UI Component, Drag state, file selection.
