@@ -88,7 +88,7 @@ Global Dependencies:
 
 #### Tickets for ICC-USER-004
 
-1. - [ ] **ICC-USER-004-BE-T01 — Download Endpoint & Cleanup**
+1. - [x] **ICC-USER-004-BE-T01 — Download Endpoint & Cleanup** (2026-02-04)
    - **Type**: BE
    - **Description**: Endpoint `GET /download/{file_id}`. Stream the file content with correct Content-Disposition header (original_name.ext). Trigger async cleanup task to delete file after successful stream (or use a background scheduler).
    - **Scope**: Included: File streaming, Cleanup hook.

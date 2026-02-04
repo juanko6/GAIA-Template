@@ -3,7 +3,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from app.application.dtos.conversion import ConvertRequest, ConvertResponse
 from app.domain.services.image_converter import ImageConverterService
-from app.application.services.upload_service import output_path_store # Quick hack: In real app use Repository
+# from app.application.services.upload_service import output_path_store # Removed invalid import
 import shutil
 import os
 import uuid
@@ -11,7 +11,7 @@ import uuid
 # In-memory storage for converted files (Mocking persistence/cloud storage)
 # Key: file_id, Value: local_path
 CONVERTED_FILES_STORE = {}
-UPLOAD_DIR = "uploads" # Shared with valid uploads
+UPLOAD_DIR = "temp_storage" # Aligned with UploadService.TEMP_DIR
 
 router = APIRouter()
 

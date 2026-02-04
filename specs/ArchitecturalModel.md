@@ -21,9 +21,13 @@ The backend follows a Clean/Hexagonal architecture:
 
 - **Domain (`backend/app/domain`)**:
   - `FileValidator`: Pure logic for validating file constraints (magic numbers, size).
+  - `ImageConverter`: Logic for format conversion using Pillow.
 - **Application (`backend/app/application`)**:
   - `UploadService`: Orchestrates the flow (Validate -> Save to Disk -> Return ID).
 - **Presentation (`backend/app/presentation`)**:
-  - `routers/upload.py`: FastAPI endpoints handling HTTP concerns (Multipart parsing, Error mapping).
+  - `routers/upload.py`: FastAPI endpoints for uploading.
+  - `routers/convert.py`: FastAPI endpoints for starting conversion.
+  - `routers/download.py`: FastAPI endpoints for file retrieval with auto-cleanup.
 - **Infrastructure**:
-  - Currently direct File I/O within the Application Service (to be refactored into an Adapter if complexity grows).
+  - Currently direct File I/O within the Application Service.
+
