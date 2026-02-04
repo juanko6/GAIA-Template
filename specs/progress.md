@@ -92,3 +92,27 @@
 - frontend/src/features/image-conversion/components/FormatSelector.tsx
 - frontend/src/features/image-conversion/constants.ts
 **Notes**: Implemented Format Selector using Radix UI Select primitive. Configured aliases and tests.
+
+**Date**: 2026-02-04
+**Milestone**: Executed plan ICC-USER-003-BE-T01 (workflow: /execute-plan)
+**Artifacts**:
+- backend/app/domain/services/image_converter.py
+- backend/tests/unit/test_image_converter.py
+**Notes**: Implemented ImageConverterService with Pillow. Handles Transparency -> White BG for JPEGs. Unit tests passed.
+
+**Date**: 2026-02-04
+**Milestone**: Executed plan ICC-USER-003-BE-T02 (workflow: /execute-plan)
+**Artifacts**:
+- backend/app/presentation/routers/convert.py
+- backend/app/application/dtos/conversion.py
+- backend/tests/integration/test_convert_endpoint.py
+**Notes**: Implemented POST /convert endpoint. Scaffolds output directory. Integrated ImageConverterService. Integration tests passed.
+
+**Date**: 2026-02-04
+**Milestone**: Executed plan ICC-USER-003-FE-T03 (workflow: /execute-plan)
+**Artifacts**:
+- frontend/src/features/image-conversion/hooks/useConvertImage.ts
+- frontend/src/features/image-conversion/components/ConverterForm.tsx
+- frontend/src/api/types.ts
+- frontend/vite.config.ts
+**Notes**: Integrated Convert Flow with API. Implemented useConvertImage hook using fetch. Created ConverterForm orchestrator. Updated App.tsx. Fixed multiple config encoding issues.
