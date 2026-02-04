@@ -3,8 +3,8 @@
 import React from 'react';
 import * as Select from '@radix-ui/react-select';
 import { Check, ChevronDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { SUPPORTED_FORMATS, SupportedFormat } from '@/features/image-conversion/constants';
+import { cn } from '../../../lib/utils';
+import { SUPPORTED_FORMATS, SupportedFormat } from '../constants';
 
 interface FormatSelectorProps {
     value: SupportedFormat;

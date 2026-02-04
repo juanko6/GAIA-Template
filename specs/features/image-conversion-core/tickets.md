@@ -75,7 +75,7 @@ Global Dependencies:
    - **Dependencies**: T01.
    - **Deliverables**: FastAPI Route, Integration Test.
 
-3. - [ ] **ICC-USER-003-FE-T03 — Conversion Flow Integration**
+3. - [x] **ICC-USER-003-FE-T03 — Conversion Flow Integration** (2026-02-04)
    - **Type**: FE
    - **Description**: Connect the "Convert" button to the API. specific "Loading" state handling (spinner/progress bar). Error toast if API fails.
    - **Scope**: Included: API Client integration, Loading UI.

@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { X } from 'lucide-react';
-import { useImagePreview } from '@/features/image-conversion/hooks/useImagePreview';
-import { cn } from '@/lib/utils';
+import { useImagePreview } from '../hooks/useImagePreview';
+import { cn } from '../../../lib/utils';
 
 interface ImagePreviewProps {
     file: File;

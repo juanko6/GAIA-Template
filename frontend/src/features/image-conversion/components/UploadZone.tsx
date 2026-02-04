@@ -2,7 +2,7 @@
 
 import React, { useCallback, useState } from 'react';
 import { useDropzone, FileRejection } from 'react-dropzone';
-import { cn } from '@/lib/utils';
+import { cn } from '../../../lib/utils';
 import { UploadCloud, AlertCircle } from 'lucide-react';
 
 interface UploadZoneProps {
