@@ -61,7 +61,7 @@ Global Dependencies:
 
 #### Tickets for ICC-USER-003
 
-1. - [ ] **ICC-USER-003-BE-T01 — Image Conversion Logic**
+1. - [x] **ICC-USER-003-BE-T01 — Image Conversion Logic** (2026-02-04)
    - **Type**: BE
    - **Description**: Implement the core service logic using Pillow. Function: `convert_image(source_path, target_format)`. Handle Transparency: If Target=JPG, composite over White background.
    - **Scope**: Included: Pillow integration, Error handling.
