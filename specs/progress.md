@@ -116,3 +116,14 @@
 - frontend/src/api/types.ts
 - frontend/vite.config.ts
 **Notes**: Integrated Convert Flow with API. Implemented useConvertImage hook using fetch. Created ConverterForm orchestrator. Updated App.tsx. Fixed multiple config encoding issues.
+
+**Date**: 2026-02-04
+**Milestone**: Fixed error "Unexpected \xff in JSON" in frontend (workflow: /fix-error)
+**Artifacts**:
+- frontend/tsconfig.json
+- frontend/tsconfig.app.json
+- frontend/vite.config.ts
+**Notes**:
+- **Error**: Build process failed due to UTF-16 BOM in tsconfig.json and duplicate/JS config.
+- **Root cause**: Windows encoding defaults and conflicting vite configuration files.
+- **Fix**: Re-created JSON and TS configs with clean UTF-8 encoding; set strict port 5188.

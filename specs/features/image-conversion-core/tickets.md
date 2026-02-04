@@ -120,3 +120,16 @@ Global Dependencies:
    - **Description**: Define and implement the cron job or logic to clean up `temp/` directory for any orphaned files older than X minutes (e.g., 15 mins).
    - **Scope**: Included: Cleanup Script/Scheduler.
    - **Deliverables**: `cleanup_job.py`.
+
+---
+
+### Story: ICC-BUG-001 — Fix Frontend Build Config
+
+#### Tickets for ICC-BUG-001
+
+1. - [x] **ICC-BUG-001-FE-T01 — Fix Config Encoding and Extension** (2026-02-04)
+   - **Type**: FE
+   - **Description**: Frontend build fails due to UTF-8 BOM in `tsconfig.json` and conflicting/invalid `vite.config.js` (when `ts` exists and type is module).
+   - **Scope**: Delete `vite.config.js`. Recreate `tsconfig.json` and `tsconfig.app.json` with clean encoding. Verify `npm run dev`.
+   - **Dependencies**: None.
+   - **Deliverables**: Working build.
