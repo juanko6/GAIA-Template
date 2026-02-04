@@ -71,3 +71,24 @@
 - backend/app/domain/services/file_validator.py
 - backend/app/application/services/upload_service.py
 **Notes**: Implemented POST /upload with size/magic-number validation. Created backend structure. Tests added but require local env setup to run. verified via code review.
+
+**Date**: 2026-02-03
+**Milestone**: Executed plan ICC-USER-001-FE-T02 (workflow: /execute-plan)
+**Artifacts**:
+- frontend/src/features/image-conversion/components/UploadZone.tsx
+**Notes**: Implemented Drag & Drop component with react-dropzone. Configured TailwindCSS/Vite. Added unit tests for UI.
+
+**Date**: 2026-02-04
+**Milestone**: Executed plan ICC-USER-001-FE-T03 (workflow: /execute-plan)
+**Artifacts**:
+- frontend/src/features/image-conversion/hooks/useImagePreview.ts
+- frontend/src/features/image-conversion/components/ImagePreview.tsx
+- frontend/src/features/image-conversion/components/ImagePreview.test.tsx
+**Notes**: Implemented preview logic using URL.createObjectURL. Added ImagePreview component with remove button. Added unit tests (mocking URL APIs).
+
+**Date**: 2026-02-04
+**Milestone**: Executed plan ICC-USER-002-FE-T01 (workflow: /execute-plan)
+**Artifacts**:
+- frontend/src/features/image-conversion/components/FormatSelector.tsx
+- frontend/src/features/image-conversion/constants.ts
+**Notes**: Implemented Format Selector using Radix UI Select primitive. Configured aliases and tests.

@@ -28,7 +28,7 @@ Global Dependencies:
    - **Dependencies**: T01 (for integration, but can be mocked).
    - **Deliverables**: `UploadZone.tsx`, Unit tests.
 
-3. - [ ] **ICC-USER-001-FE-T03 — Image Preview State**
+3. - [x] **ICC-USER-001-FE-T03 — Image Preview State** (2026-02-04)
    - **Type**: FE
    - **Description**: Once file is selected, read it locally (FileReader API) to show a thumbnail preview before sending or after backend confirmation.
    - **Scope**: Included: Preview container, remove button.
@@ -41,14 +41,14 @@ Global Dependencies:
 
 #### Tickets for ICC-USER-002
 
-1. - [ ] **ICC-USER-002-FE-T01 — Format Selection UI**
+1. - [x] **ICC-USER-002-FE-T01 — Format Selection UI** (2026-02-04)
    - **Type**: FE
    - **Description**: Create a dropdown/select component listing supported formats (JPG, PNG, WEBP, BMP, GIF). Ensure styling matches brand.
    - **Scope**: Included: State management for selected format.
    - **Dependencies**: None.
    - **Deliverables**: `FormatSelector.tsx`.
 
-2. - [ ] **ICC-USER-002-BE-T02 — Supported Formats Config**
+2. - [x] **ICC-USER-002-BE-T02 — Supported Formats Config** (2026-02-04)
    - **Type**: BE
    - **Description**: Define a centralized Enum/Config for supported formats in the backend to ensure validation consistency.
    - **Scope**: Included: Enum definition, shared logic.
