@@ -68,7 +68,7 @@ Global Dependencies:
    - **Dependencies**: ICC-USER-001-BE-T01.
    - **Deliverables**: Domain Service `ImageConverter`, Unit Tests (checking tranparency handling).
 
-2. - [ ] **ICC-USER-003-BE-T02 — Conversion Endpoint**
+2. - [x] **ICC-USER-003-BE-T02 — Conversion Endpoint** (2026-02-04)
    - **Type**: BE
    - **Description**: Create endpoint `POST /convert`. Input: `file_id`, `target_format`. Calls the conversion service. Returns: `download_url` or binary stream.
    - **Scope**: Included: API Controller, Exception mapping.

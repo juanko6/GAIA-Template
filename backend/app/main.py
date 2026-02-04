@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.presentation.routers import upload
+from app.presentation.routers import upload, convert
 
 app = FastAPI(
     title="Image Conversion API",
@@ -21,7 +21,8 @@ app.add_middleware(
 )
 
 # Register routers
-app.include_router(upload.router, prefix="/api/v1")
+app.include_router(upload.router, prefix="/api/v1", tags=["upload"])
+app.include_router(convert.router, prefix="/api/v1", tags=["convert"])
 
 @app.get("/health")
 async def health_check():
