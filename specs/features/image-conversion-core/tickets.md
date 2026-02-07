@@ -135,7 +135,7 @@ Global Dependencies:
 
 ### Story: ICC-BUG-002 — Fix PostCSS/Tailwind Configuration
 #### Tickets for ICC-BUG-002
-1. - [ ] **ICC-BUG-002-FE-T01 — Fix PostCSS Syntax Error**
+1. - [x] **ICC-BUG-002-FE-T01 — Fix PostCSS Syntax Error** (2026-02-08)
    - **Type**: FE
    - **Description**: Frontend build fails with `[SyntaxError] Invalid or unexpected token` in PostCSS config. Usually caused by invalid encoding (UTF-16 BOM) or deprecated config format.
    - **Scope**: Re-create `postcss.config.js` and `tailwind.config.js` with clean UTF-8 encoding. Update Dockerfile to Node 22 (Alpine) if needed for compatibility.
