@@ -46,5 +46,6 @@ class UploadService:
         
         with open(save_path, "wb") as f:
             f.write(content)
-            
-        return file_id
+        
+        # Return full filename (id + extension) as file_id
+        return f"{file_id}{original_ext}"

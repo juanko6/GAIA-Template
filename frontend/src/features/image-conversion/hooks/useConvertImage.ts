@@ -67,9 +67,8 @@ export const useConvertImage = (): UseConvertImageResult => {
 
             // Ensure download_url is absolute if it's returning a relative path from API
             if (convertData.download_url && !convertData.download_url.startsWith('http')) {
-                // Remove /api/v1 from base to get the root host:port
-                const base = API_BASE_URL.replace('/api/v1', '');
-                convertData.download_url = `${base}${convertData.download_url}`;
+                // The backend returns /download/{file_id}, we need to prepend base URL
+                convertData.download_url = `${API_BASE_URL}${convertData.download_url}`;
             }
 
             setStatus('success');
