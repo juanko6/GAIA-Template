@@ -117,14 +117,10 @@ export const ConverterForm: React.FC = () => {
 
                     <div className="flex flex-col sm:flex-row gap-3 justify-center">
                         <a
-                            href={downloadUrl} // Note: This URL must be absolute or proxied correctly.
-                            // In dev: http://localhost:8005/download/xyz
-                            // For now, let's assume API returns full URL or valid relative path.
-                            // The backend returns "/download/{file_id}". We need to prepend API Base or similar if it's relative to root but hosted elsewhere.
-                            // Actually, backend returns "/download/...", waiting for FE to handle domain.
-                            // Let's fix this in hook or here.
+                            href={downloadUrl}
                             download
-                            className="inline-flex items-center justify-center gap-2 py-2.5 px-6 rounded-lg font-medium bg-green-600 text-white hover:bg-green-700 shadow-lg shadow-green-600/20 transition-all"
+                            style={{ backgroundColor: '#4F7A28' }}
+                            className="inline-flex items-center justify-center gap-2 py-2.5 px-6 rounded-lg font-medium text-white hover:opacity-90 shadow-lg shadow-green-900/20 transition-all"
                         >
                             Descargar Imagen
                         </a>
