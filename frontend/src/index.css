@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* [Feature: Image Conversion Core] [Story: ICC-BUG-002] [Ticket: ICC-BUG-002-FE-T01] */
+@import "tailwindcss";
 
 :root {
   --background: 40 60% 99%; /* Warm White */

@@ -132,4 +132,12 @@ Global Dependencies:
    - **Description**: Frontend build fails due to UTF-8 BOM in `tsconfig.json` and conflicting/invalid `vite.config.js` (when `ts` exists and type is module).
    - **Scope**: Delete `vite.config.js`. Recreate `tsconfig.json` and `tsconfig.app.json` with clean encoding. Verify `npm run dev`.
    - **Dependencies**: None.
-   - **Deliverables**: Working build.
+
+### Story: ICC-BUG-002 — Fix PostCSS/Tailwind Configuration
+#### Tickets for ICC-BUG-002
+1. - [x] **ICC-BUG-002-FE-T01 — Fix PostCSS Syntax Error** (2026-02-08)
+   - **Type**: FE
+   - **Description**: Frontend build fails with `[SyntaxError] Invalid or unexpected token` in PostCSS config. Usually caused by invalid encoding (UTF-16 BOM) or deprecated config format.
+   - **Scope**: Re-create `postcss.config.js` and `tailwind.config.js` with clean UTF-8 encoding. Update Dockerfile to Node 22 (Alpine) if needed for compatibility.
+   - **Dependencies**: None.
+   - **Deliverables**: Working `docker-compose up` with no PostCSS errors.
