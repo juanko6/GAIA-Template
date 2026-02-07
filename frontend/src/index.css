@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 60% 99%; /* Warm White */
+  --foreground: 255.6 23.9% 22.2%; /* Navy */
+  
+  --primary: 24.3 61.8% 43.1%; /* Terracotta AA */
+  --primary-foreground: 40 60% 99%;
+
+  --muted: 23.3 39.7% 73.3%;
+  --muted-foreground: 288 2.2% 44.5%;
+  
+  --border: 288 2.2% 44.5%;
+  --ring: 82.6 46.0% 51.4%; /* Green */
+  --radius: 0.5rem;
+}
+
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
