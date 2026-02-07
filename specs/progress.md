@@ -170,3 +170,14 @@
 **Date**: 2026-02-07
 **Milestone**: Feature Closed: Image Conversion Core (workflow: /close-feature)
 **Artifacts**: specs/features/image-conversion-core/*
+
+**Date**: 2026-02-08
+**Milestone**: Fixed error ICC-BUG-002-FE-T01 (workflow: /fix-error)
+**Artifacts**:
+- frontend/postcss.config.js
+- frontend/package.json
+- frontend/src/index.css
+**Notes**:
+- **Error**: Frontend failed with `SyntaxError: Invalid or unexpected token` on PostCSS config.
+- **Root cause**: Tailwind v4 moved PostCSS plugin to `@tailwindcss/postcss` package.
+- **Fix**: Installed `@tailwindcss/postcss`, updated config to use new plugin, changed CSS to use `@import "tailwindcss"` syntax.
