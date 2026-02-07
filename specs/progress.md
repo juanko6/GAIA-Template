@@ -127,3 +127,12 @@
 - **Error**: Build process failed due to UTF-16 BOM in tsconfig.json and duplicate/JS config.
 - **Root cause**: Windows encoding defaults and conflicting vite configuration files.
 - **Fix**: Re-created JSON and TS configs with clean UTF-8 encoding; set strict port 5188.
+
+**Date**: 2026-02-04
+**Milestone**: Executed plan ICC-USER-004-BE-T01 (workflow: /execute-plan)
+**Artifacts**:
+- backend/app/presentation/routers/download.py
+- backend/app/main.py
+- backend/Dockerfile
+- backend/requirements.txt
+**Notes**: Implemented `GET /download/{file_id}` with background cleanup task. Fixed backend infrastructure by adding `libmagic1` and `Pillow` to the production image. Integration tests passed in container.

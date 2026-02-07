@@ -95,7 +95,7 @@ Global Dependencies:
    - **Dependencies**: ICC-USER-003-BE-T02.
    - **Deliverables**: FastAPI Route, BackgroundTask for cleanup.
 
-2. - [ ] **ICC-USER-004-FE-T02 — Download Action UI**
+2. - [x] **ICC-USER-004-FE-T02 — Download Action UI** (2026-02-07)
    - **Type**: FE
    - **Description**: Display "Download" button after successful conversion. On click, trigger the browser download.
    - **Scope**: Included: Download button component, Link handling.

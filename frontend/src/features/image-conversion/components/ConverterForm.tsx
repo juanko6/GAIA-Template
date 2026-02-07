@@ -1,4 +1,4 @@
-// [Feature: Image Conversion Core] [Story: ICC-USER-003] [Ticket: ICC-USER-003-FE-T03]
+// [Feature: Image Conversion Core] [Story: ICC-USER-003, ICC-USER-004] [Ticket: ICC-USER-003-FE-T03, ICC-USER-004-FE-T02]
 
 import React, { useState } from 'react';
 import { UploadZone } from './UploadZone';

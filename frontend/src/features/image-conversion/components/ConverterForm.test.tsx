@@ -1,8 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ConverterForm } from './ConverterForm';
 import { useConvertImage } from '../hooks/useConvertImage';
-// React unused
 
 // Mock the hook
 vi.mock('../hooks/useConvertImage', () => ({
@@ -79,11 +78,6 @@ describe('ConverterForm', () => {
         });
 
         render(<ConverterForm />);
-        // Need to set file state implicitly by mocking hook logic or ensuring render logic passes
-        // Since component local state holds 'file', simply re-rendering with mock hook won't set 'file' state unless we interact.
-        // We need to simulate the flow or expose internals.
-        // For this test, we accept that 'Mock Upload' needs to be clicked to enter the state where loading is visible
-
         fireEvent.click(screen.getByText('Mock Upload'));
 
         expect(screen.getByText('Convirtiendo...')).toBeInTheDocument();
@@ -100,5 +94,41 @@ describe('ConverterForm', () => {
 
         render(<ConverterForm />);
         expect(screen.getByText('Failed to convert')).toBeInTheDocument();
+    });
+
+    it('displays success message and download button after conversion', async () => {
+        const mockResult = {
+            download_url: 'http://localhost:8005/api/v1/download/test.png',
+            file_id: 'test.png',
+            format: 'png'
+        };
+        mockConvert.mockResolvedValue(mockResult);
+
+        // First render
+        const { rerender } = render(<ConverterForm />);
+
+        // 1. Upload file
+        fireEvent.click(screen.getByText('Mock Upload'));
+
+        // 2. Click convert
+        fireEvent.click(screen.getByText('Convertir Imagen'));
+
+        // 3. Update mock for success
+        (useConvertImage as any).mockReturnValue({
+            convert: mockConvert,
+            isLoading: false,
+            status: 'success',
+            error: null,
+            reset: mockReset,
+        });
+
+        // 4. Trigger re-render by mock update or just wait if component state updates
+        rerender(<ConverterForm />);
+
+        expect(await screen.findByText('¡Conversión exitosa!')).toBeInTheDocument();
+        expect(screen.getByText('Descargar Imagen')).toBeInTheDocument();
+
+        const downloadLink = screen.getByText('Descargar Imagen') as HTMLAnchorElement;
+        expect(downloadLink.href).toContain('test.png');
     });
 });

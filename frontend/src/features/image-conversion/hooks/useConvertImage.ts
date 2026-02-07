@@ -64,6 +64,14 @@ export const useConvertImage = (): UseConvertImageResult => {
             }
 
             const convertData = await convertRes.json() as ConvertResponse;
+
+            // Ensure download_url is absolute if it's returning a relative path from API
+            if (convertData.download_url && !convertData.download_url.startsWith('http')) {
+                // Remove /api/v1 from base to get the root host:port
+                const base = API_BASE_URL.replace('/api/v1', '');
+                convertData.download_url = `${base}${convertData.download_url}`;
+            }
+
             setStatus('success');
             return convertData;
 
