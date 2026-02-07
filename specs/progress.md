@@ -167,4 +167,6 @@
 **Artifacts**:
 - backend/app/application/dtos/conversion.py
 - frontend/src/features/image-conversion/components/ConverterForm.tsx
-**Notes**: Hardened DTOs with `extra="forbid"`. Applied brand success color to UI. Verified BOLA and XSS compliance. All 16 backend and 10+ frontend tests passing.
+**Date**: 2026-02-07
+**Milestone**: Feature Closed: Image Conversion Core (workflow: /close-feature)
+**Artifacts**: specs/features/image-conversion-core/*
