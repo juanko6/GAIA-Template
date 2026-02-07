@@ -136,3 +136,11 @@
 - backend/Dockerfile
 - backend/requirements.txt
 **Notes**: Implemented `GET /download/{file_id}` with background cleanup task. Fixed backend infrastructure by adding `libmagic1` and `Pillow` to the production image. Integration tests passed in container.
+
+**Date**: 2026-02-07
+**Milestone**: Executed plan ICC-USER-004-FE-T02 (workflow: /execute-plan)
+**Artifacts**:
+- frontend/src/features/image-conversion/components/ConverterForm.tsx
+- frontend/src/features/image-conversion/hooks/useConvertImage.ts
+- frontend/src/setupTests.ts
+**Notes**: Implemented download button in UI. Fixed a critical environment issue where `setupTests.ts` was in UTF-16, blocking all Vitest execution. Cleaned up residual `.js` files in `src`. Verified BE-FE connectivity for downloads.

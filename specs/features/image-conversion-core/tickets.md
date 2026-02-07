@@ -108,7 +108,7 @@ Global Dependencies:
 
 #### Tickets for ICC-USER-005
 
-1. - [ ] **ICC-USER-005-BE-T01 — Security Hardening (File Types)**
+1. - [x] **ICC-USER-005-BE-T01 — Security Hardening (File Types)** (2026-02-07)
    - **Type**: BE
    - **Description**: Ensure `python-magic` or similar is used to verify file content, not just extension. Reject known malware signatures if possible (scope limited to basic implementation).
    - **Scope**: Included: Enhanced validation logic.
