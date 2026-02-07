@@ -144,3 +144,11 @@
 - frontend/src/features/image-conversion/hooks/useConvertImage.ts
 - frontend/src/setupTests.ts
 **Notes**: Implemented download button in UI. Fixed a critical environment issue where `setupTests.ts` was in UTF-16, blocking all Vitest execution. Cleaned up residual `.js` files in `src`. Verified BE-FE connectivity for downloads.
+
+**Date**: 2026-02-07
+**Milestone**: Executed plan ICC-USER-005-BE-T01 (workflow: /execute-plan)
+**Artifacts**:
+- backend/app/domain/services/file_validator.py
+- backend/app/domain/services/security_utils.py
+- backend/tests/unit/test_file_validator.py
+**Notes**: Hardened file validation by implementing magic number checks and extension consistency verification. Created a dedicated security utility for mime detection. All unit tests passed, including cases for renamed malicious files and mismatched extensions.

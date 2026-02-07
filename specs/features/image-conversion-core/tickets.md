@@ -115,7 +115,7 @@ Global Dependencies:
    - **Dependencies**: ICC-USER-001-BE-T01.
    - **Deliverables**: Security Utility module, Test cases with renamed exe files.
 
-2. - [ ] **ICC-USER-005-OTH-T02 — Storage Lifecycle Policy**
+2. - [x] **ICC-USER-005-OTH-T02 — Storage Lifecycle Policy** (2026-02-07)
    - **Type**: OTH
    - **Description**: Define and implement the cron job or logic to clean up `temp/` directory for any orphaned files older than X minutes (e.g., 15 mins).
    - **Scope**: Included: Cleanup Script/Scheduler.
